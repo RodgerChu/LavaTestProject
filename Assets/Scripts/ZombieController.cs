@@ -22,12 +22,14 @@ public class ZombieController : MonoBehaviour
 
     public void SetHit()
     {
+        Time.timeScale = 0.5f;
         animator.enabled = false;
         ChangeGravityForJoint(ragdollParent, true);
     }
 
     public void OnReset()
     {
+        Time.timeScale = 1;
         animator.enabled = true;
         gameObject.transform.localPosition = zombieStartPosition.position;
         gameObject.transform.localRotation = Quaternion.identity;
