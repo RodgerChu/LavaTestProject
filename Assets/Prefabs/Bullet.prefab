@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletRigidbody: {fileID: 8253388055456363248}
+  bulletStats: {fileID: 11400000, guid: 2880d6b244d8e409dae655086a259b19, type: 2}
 --- !u!135 &3484328563493198749
 SphereCollider:
   m_ObjectHideFlags: 0

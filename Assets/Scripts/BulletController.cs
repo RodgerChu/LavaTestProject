@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     public Rigidbody bulletRigidbody;
+    public BulletSO bulletStats;
 
     private float lifeTime = 10f;
 
@@ -42,7 +43,7 @@ public class BulletController : MonoBehaviour
 
         if (rb != null)
         {
-            rb.AddForceAtPosition(bulletRigidbody.velocity * 100, collision.contacts[0].point);
+            rb.AddForceAtPosition(bulletRigidbody.velocity * bulletStats.forceMultiplyer, collision.contacts[0].point);
         }
 
         Destroy(gameObject);
